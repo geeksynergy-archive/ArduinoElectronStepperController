@@ -1,0 +1,23 @@
+{
+  "name": "Stepper_Controller",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "./node_modules/.bin/electron-rebuild"
+  },
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-packager": "^8.7.0",
+    "electron-rebuild": "^1.5.7"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "dialog": "^0.2.0",
+    "electron-notifications": "^1.0.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "remote": "^0.2.6",
+    "serialport": "^4.0.7"
+  }
+}
