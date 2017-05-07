@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Silk Design Controller</title>
+  <!-- Insert this line above script imports  -->
+  <script>
+    if (typeof module === 'object') { window.module = module; module = undefined; }
+  </script>
+
+  <!-- normal script imports etc  -->
+  <!-- Stylesheets -->
+  <!--<link rel="stylesheet" href="../css/photon.min.css">-->
+  <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+  <!-- Javascript -->
+  <!--<script src="scripts/menu.js" charset="utf-8"></script>-->
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/stepperfunc.js"></script>
+
+
+  <!-- Insert this line after script imports -->
+
+
+</head>
+
+<body onselectstart="return false;">
+
+  <h1 >
+    <center style="cursor: default;">Silk Design Controller</center>
+  </h1>
+
+  <div class="container-fluid" >
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div id="ctrlform" class="form-group">
+          <form action="#update">
+            <label for="portlist">Drive Port</label>
+            <select id="portlist" name="portlist"></select>
+
+            <label for="slider">Rotation Range (deg)</label>
+
+            <div id="slider" name="slider"></div>
+
+
+            <div class="input-group">
+              <label for="minrot" style="text-align: center;" >Minimum Angle</label>
+              <input type="number" class="form-control" style="text-align: center;" id="minrot" name="minrot" placeholder="45">
+              <span class="input-group-btn input-space"></span>
+              <label for="maxrot" style="text-align: center;">Maximum Angle</label>
+              <input type="number" class="form-control" style="text-align: center;" id="maxrot" name="maxrot" placeholder="180">
+            </div>
+
+
+
+            <!--SINGLE/DOUBLE/INTERLEAVE/MICROSTEP-->
+            <label for="stepdirection">Direction</label>
+            <select id="stepdirection" name="stepdirection">
+ <option value="FORWARD">FORWARD</option>
+  <option value="BACKWARD">BACKWARD</option>
+  <option value="ALTERNATE"  selected="selected">ALTERNATE</option>
+      </select>
+
+            <!--SINGLE/DOUBLE/INTERLEAVE/MICROSTEP-->
+            <label for="stepwidth">Step Width</label>
+            <select id="stepwidth" name="stepwidth">
+ <option value="SINGLE"  selected="selected">SINGLE</option>
+  <option value="DOUBLE">DOUBLE</option>
+  <option value="INTERLEAVE">INTERLEAVE</option>
+  <option value="MICROSTEP">MICROSTEP</option>
+
+      </select>
+
+            <!--SINGLE/DOUBLE/INTERLEAVE/MICROSTEP-->
+            <label for="motordrive">Drive Motor</label>
+            <select id="motordrive" name="motordrive">
+  <option value="0"  selected="selected">MOTOR-1</option>
+  <option value="1">MOTOR-2</option>
+  <option value="2">BOTH</option>
+
+      </select>
+
+
+            <input id="update_btn" class="btn btn-success" type="button" value="UPDATE">
+
+          </form>
+        </div>
+
+      </div>
+
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div id="dataform" class="form-group">
+
+          <form>
+            <label for="portresponse">Feed : </label>
+            <textarea id="portresponse" class="form-control custom-control" rows="21" readonly></textarea>
+            <input id="save_btn" type="button" class="btn btn-info" hidden="hidden" value="SAVE TO FILE">
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
