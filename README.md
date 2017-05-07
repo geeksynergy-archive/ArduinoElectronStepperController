@@ -12,3 +12,4 @@ $ npm run rebuild
 
 Use the below code to run the application
 $ npm start
+# Serial_to_CSV_ElectronNodeJS
